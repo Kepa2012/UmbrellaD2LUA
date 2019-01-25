@@ -48,7 +48,7 @@ function PudgeExtended.OnDraw()
 		if not Entity.IsSameTeam(Pudge.Hero, enemy) and Entity.IsAlive(enemy) then
 			local speed = NPC.GetMoveSpeed(enemy)
 			local angle = Entity.GetRotation(enemy)
-			local angleOffset = Angle(0, 45, 0)
+			local angleOffset = Angle(0, 0, 0)
 			angle:SetYaw(angle:GetYaw() + angleOffset:GetYaw())
 			local x,y,z = angle:GetVectors()
 			local direction = x + y + z
@@ -110,7 +110,7 @@ function PudgeExtended.OnUpdate()
 			else
 				local speed = NPC.GetMoveSpeed(enemy)
 				local angle = Entity.GetRotation(enemy)
-				local angleOffset = Angle(0, 45, 0)
+				local angleOffset = Angle(0, 0, 0)
 				angle:SetYaw(angle:GetYaw() + angleOffset:GetYaw())
 				local x,y,z = angle:GetVectors()
 				local direction = x + y + z
